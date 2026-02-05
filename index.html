@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;500&family=Pattaya&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="bg-elements" id="bg-elements"></div>
+
+    <section id="login-screen">
+        <div class="kitty-decor top-left"><img src="public/2.svg" alt="kitty2"></div>
+        <div class="kitty-decor top-right"><img src="public/3.svg" alt="kitty3"></div>
+        <div class="kitty-decor bottom-left"><img src="public/4.svg" alt="kitty4"></div>
+        <div class="kitty-decor bottom-right"><img src="public/5.svg" alt="kitty5"></div>
+
+        <div class="glass-panel">
+            <div class="main-kitty-container">
+                <img src="public/1.svg" alt="Main Kitty" class="main-kitty">
+                <div class="floating-heart-overlay">❤️</div>
+            </div>
+
+            <h1 class="pattaya main-title">Special Valentine</h1>
+
+            <div id="auth-area">
+                <button id="show-input-btn">คลิกใส่รหัสผ่านก่อนนะจ้ะ</button>
+                <div id="password-form" class="hidden">
+                    <input type="password" id="password" placeholder="8 ตัวง่ายๆ" maxlength="8">
+                    <button id="unlock-btn">ยืนยัน</button>
+                </div>
+                <p id="error-msg" style="display: none;">รหัสผ่านไม่ถูกต้องนะจ้าาาาา.. ลองใหม่นะ!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="card-screen" class="hidden">
+        <div class="card" id="valentine-card">
+            <div class="card-front">
+                <div class="heart-lock">❤️</div>
+                <p>จดหมายลับสำหรับคุณ</p>
+                <small>(แตะเพื่อเปิด)</small>
+            </div>
+            <div class="card-back">
+                <div class="card-inner-content">
+                    <h2 class="pattaya">Happy Valentine's</h2>
+                    <div class="divider"></div>
+                    <p class="sub-text">ขอบคุณที่เดินมาด้วยกันจนถึงวันนี้นะ รักหนูที่สุดต่อไปนี้จะทำตัวดีๆไม่ให้เธอหงุดหงิดจะหวานกับหนูให้มากๆค้าบจะได้อยู่กับเธอนานๆ จะเป็นคนที่ดีขึ้น รักนะ❤️ <br>BY BIGVER EIEI</p>
+                    <button id="go-to-gift-btn" class="special-btn">เปิดของขวัญของเธอ 🎁</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gift-screen" class="hidden">
+        <h2 class="pattaya title">เลือกกล่องที่ชอบที่สุดนะ</h2>
+        <div class="gift-container">
+            <div class="gift-box" onclick="openGift(1)">
+                <div class="gift-icon">🎁</div>
+                <p>กล่องที่ 1</p>
+            </div>
+            <div class="gift-box" onclick="openGift(2)">
+                <div class="gift-icon">🎁</div>
+                <p>กล่องที่ 2</p>
+            </div>
+            <div class="gift-box" onclick="openGift(3)">
+                <div class="gift-icon">🎁</div>
+                <p>กล่องที่ 3</p>
+            </div>
+        </div>
+        <div id="gift-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-modal" onclick="closeModal()">&times;</span>
+                <div id="gift-message" class="pattaya"></div>
+            </div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>
